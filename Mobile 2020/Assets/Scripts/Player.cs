@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Ilan Bixin;
-    [SerializeField] Interface UI;
+    [HideInInspector] public Ilan Bixin;
+    [HideInInspector] public int Dinheiro;
 
-    void Start()
+    public void Init()
     {
         Bixin = new Ilan("Ronaldinho");
-        UI.Nome = Bixin.Name;
-        UI.Fome = Bixin.Fome.ToString();
-        UI.Sujeira = Bixin.Sujeira.ToString();
-        UI.Diversao = Bixin.Diversao.ToString();
-        //UI.Tempo = Bixin.BornDate;        
-        UI.DataNascimento = Bixin.BornDate.ToString("dd/MM/yyyy");
+        Dinheiro = 100;
     }
 }
